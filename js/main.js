@@ -3,7 +3,7 @@ var canvas = document.getElementById("canvas");
 canvas.width = Math.floor((window.innerWidth-80)/16)*16;
 canvas.height = Math.floor((window.innerHeight-80)/16)*16;
 var ctx = canvas.getContext("2d");
-//Getting images
+//Getting media
 var mower = document.getElementById("mower");
 var rock = document.getElementById("rock");
 var grass = document.getElementById("grass");
@@ -11,6 +11,9 @@ var mowedgrassv = document.getElementById("mowedgrassv");
 var mowedgrassh = document.getElementById("mowedgrassh");
 var longgrass = document.getElementById("longgrass");
 var fuel = document.getElementById("fuel");
+var rip = document.getElementById("rip");
+var scrunch = document.getElementById("scrunch");
+var water = document.getElementById("water");
 //Character positions and direction
 var charx = 0.0;
 var chary = 0.0;
@@ -39,7 +42,6 @@ function genMap(xlim, ylim) {
 			if (randompercent <= 100 && randompercent > 87.5) {
 				tempmaprow.push(3);
 			}
-			tempmaprow.push(Math.round((Math.random()*3/4)+0.25));
 		}
 		protomap.push(tempmaprow);
 		tempmaprow = [];
@@ -57,13 +59,19 @@ function keys(event) {
 				chary-=16;
 				if ((protomap[chary/16][charx/16] == 1) || (protomap[chary/16][charx/16] == 4)) {
 					protomap[chary/16][charx/16] = 5;
+					rip.pause();
+					rip.play();
 				}
 				if (protomap[chary/16][charx/16] == 3) {
 					protomap[chary/16][charx/16] = 5;
 					fuellevel += 10;
+					water.pause();
+					water.play();
 				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
+					rip.pause();
+					rip.play();
 				}
 				drawMap(protomap);
 				ctx.drawImage(mower, 0, 0 , 14, 16, charx, chary, 14, 16);
@@ -81,13 +89,19 @@ function keys(event) {
 				charx-=16;
 				if ((protomap[chary/16][charx/16] == 1) || (protomap[chary/16][charx/16] == 5)) {
 					protomap[chary/16][charx/16] = 4;
+					rip.pause();
+					rip.play();
 				}
 				if (protomap[chary/16][charx/16] == 3) {
 					protomap[chary/16][charx/16] = 4;
 					fuellevel += 10;
+					water.pause();
+					water.play();
 				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
+					rip.pause();
+					rip.play();
 				}
 				drawMap(protomap);
 				ctx.drawImage(mower, 0, 0, 14, 16, charx, chary, 14, 16);
@@ -105,13 +119,19 @@ function keys(event) {
 				chary+=16;
 				if ((protomap[chary/16][charx/16] == 1) || (protomap[chary/16][charx/16] == 4)) {
 					protomap[chary/16][charx/16] = 5;
+					rip.pause();
+					rip.play();
 				}
 				if (protomap[chary/16][charx/16] == 3) {
 					protomap[chary/16][charx/16] = 5;
 					fuellevel += 10;
+					water.pause();
+					water.play();
 				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
+					rip.pause();
+					rip.play();
 				}
 				drawMap(protomap);
 				ctx.drawImage(mower, 0, 0, 14, 16, charx, chary, 14, 16);
@@ -129,13 +149,19 @@ function keys(event) {
 				charx+=16;
 				if ((protomap[chary/16][charx/16] == 1) || (protomap[chary/16][charx/16] == 5)) {
 					protomap[chary/16][charx/16] = 4;
+					rip.pause();
+					rip.play();
 				}
 				if (protomap[chary/16][charx/16] == 3) {
 					protomap[chary/16][charx/16] = 4;
 					fuellevel += 10;
+					water.pause();
+					water.play();
 				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
+					rip.pause();
+					rip.play();
 				}
 				drawMap(protomap);
 				ctx.drawImage(mower, 0, 0, 14, 16, charx, chary, 14, 16);
@@ -150,6 +176,8 @@ function keys(event) {
 		case 69: //E
 			if (protomap[chary/16][charx/16] == 0) {
 				protomap[chary/16][charx/16] = 1;
+				scrunch.pause();
+				scrunch.play();
 			}
 			drawMap(protomap);
 			ctx.drawImage(mower, 0, 0, 14, 16, charx, chary, 14, 16);
@@ -186,7 +214,7 @@ function drawMap(map) {
 function inspect() {
 	for (var aa=0; aa<protomap.length; aa++) {
 		for (var bb=0; bb<protomap[aa].length; bb++) {
-			if ((protomap[aa][bb] != 4) || (protomap[aa][bb] != 5)) {
+			if ((protomap[aa][bb] != 4) && (protomap[aa][bb] != 5)) {
 				alert('Lawn Mowing is Insufficient!');
 				return false;
 			}
@@ -194,4 +222,13 @@ function inspect() {
 	}
 	alert('Lawn is good. You win!');
 	return true;
+}
+function win() {
+	for (var cc=0; cc<protomap.length; cc++) {
+		for (var dd=0; dd<protomap[cc].length; dd++) {
+			protomap[cc][dd]=4;
+		}
+	}
+	drawMap(protomap);
+	ctx.drawImage(mower, 0, 0, 14, 16, charx, chary, 14, 16);
 }
