@@ -11,7 +11,7 @@ Controls
 
 WASD to move around and mow grass into mowed grass andmow long grass into normal grass.
 
-E to pick up rocks.
+E to pick up rocks and jerry cans.
 
 The fuel level is at the bottom right.
 

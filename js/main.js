@@ -62,12 +62,6 @@ function keys(event) {
 					rip.pause();
 					rip.play();
 				}
-				if (protomap[chary/16][charx/16] == 3) {
-					protomap[chary/16][charx/16] = 5;
-					fuellevel += 10;
-					water.pause();
-					water.play();
-				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
 					rip.pause();
@@ -91,12 +85,6 @@ function keys(event) {
 					protomap[chary/16][charx/16] = 4;
 					rip.pause();
 					rip.play();
-				}
-				if (protomap[chary/16][charx/16] == 3) {
-					protomap[chary/16][charx/16] = 4;
-					fuellevel += 10;
-					water.pause();
-					water.play();
 				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
@@ -122,12 +110,6 @@ function keys(event) {
 					rip.pause();
 					rip.play();
 				}
-				if (protomap[chary/16][charx/16] == 3) {
-					protomap[chary/16][charx/16] = 5;
-					fuellevel += 10;
-					water.pause();
-					water.play();
-				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
 					rip.pause();
@@ -152,12 +134,6 @@ function keys(event) {
 					rip.pause();
 					rip.play();
 				}
-				if (protomap[chary/16][charx/16] == 3) {
-					protomap[chary/16][charx/16] = 4;
-					fuellevel += 10;
-					water.pause();
-					water.play();
-				}
 				if (protomap[chary/16][charx/16] == 2) {
 					protomap[chary/16][charx/16] = 1;
 					rip.pause();
@@ -178,6 +154,12 @@ function keys(event) {
 				protomap[chary/16][charx/16] = 1;
 				scrunch.pause();
 				scrunch.play();
+			}
+			if (protomap[chary/16][charx/16] == 3) {
+					protomap[chary/16][charx/16] = 5;
+					fuellevel += 10;
+					water.pause();
+					water.play();
 			}
 			drawMap(protomap);
 			ctx.drawImage(mower, 0, 0, 14, 16, charx, chary, 14, 16);
