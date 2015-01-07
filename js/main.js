@@ -156,7 +156,7 @@ function keys(event) {
 				scrunch.play();
 			}
 			if (protomap[chary/16][charx/16] == 3) {
-					protomap[chary/16][charx/16] = 5;
+					protomap[chary/16][charx/16] = 1;
 					fuellevel += 20;
 					water.pause();
 					water.play();
