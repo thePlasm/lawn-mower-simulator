@@ -157,7 +157,7 @@ function keys(event) {
 			}
 			if (protomap[chary/16][charx/16] == 3) {
 					protomap[chary/16][charx/16] = 5;
-					fuellevel += 10;
+					fuellevel += 20;
 					water.pause();
 					water.play();
 			}

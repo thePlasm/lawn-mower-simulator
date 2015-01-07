@@ -15,6 +15,6 @@ E to pick up rocks and jerry cans.
 
 The fuel level is at the bottom right.
 
-Jerry cans give you 10 fuel.
+Jerry cans give you 20 fuel.
 
 Moving 1 tile makes you lose 1 fuel.
