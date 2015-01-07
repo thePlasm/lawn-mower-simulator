@@ -51,3 +51,11 @@ body {
 	bottom: 5px;
 	right: 223px;
 }
+#opensource {
+	height: 32px;
+	width: 32px;
+	margin:auto;
+	position: absolute;
+	bottom: 5px;
+	right: 255px;
+}
