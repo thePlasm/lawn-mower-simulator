@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2014 Rasmus Jepsen
+Licensed under the MIT license
+thePlasm presents Realm-of-Particles
+A 2D Casual browser game
+Technologies used: HTML5 and Canvas
+-->
+<html lang='en'>
+    <head>
+        <meta charset="utf-8" />
+		<title>Lawn Mower Simulator</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+		<img src="media/mower.png" id='mower' style='height: 16px; width: 16px;' hidden>
+		<img src="media/rock.png" id='rock' style='height: 16px; width: 16px;' hidden>
+		<img src="media/longgrass.png" id='longgrass' style='height: 16px; width: 16px;' hidden>
+		<img src="media/grass.png" id='grass' style='height: 16px; width: 16px;' hidden>
+		<img src="media/mowedgrassv.png" id='mowedgrassv' style='height: 16px; width: 16px;' hidden>
+		<img src="media/mowedgrassh.png" id='mowedgrassh' style='height: 16px; width: 16px;' hidden>
+		<img src="media/fuel.png" id='fuel' style='height: 16px; width: 16px;' hidden>
+		<div align='center' id='wrapper'>
+			<canvas id='canvas'>Your browser does not support the HTML5 canvas, please update it.</canvas>
+			<a href='readme.md'>
+				<img src="media/readme.png" id='readme' style='height: 32px; width: 32px;'>
+			</a>
+			<a href='license.md'>
+				<img src="media/license.png" id='license' style='height: 32px; width: 32px;'>
+			</a>
+			<input type='button' id='inspector' value='Inspect Lawn' onclick='inspect()'>
+			<p id='fuelgauge'>Fuel:</p>
+			<script src='js/main.js'></script>
+			<noscript>Your browser does not support JavaScript, please update it.</noscript>
+		</div>
+    </body>
+</html>

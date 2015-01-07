@@ -1,0 +1,53 @@
+body {
+	position: relative;
+	background-image: url("../media/bgimg.png");
+	margin: 0px;
+}
+#wrapper {
+	position: relative;
+	margin:16px;
+}
+#canvas {
+	margin: 0px;
+	padding: 0px;
+	border: 16px solid #000000;
+	border-bottom: 32px solid #000000;
+}
+#fuelgauge {
+	height: 32px;
+	width: 96px;
+	background-color: #FF0000;
+	font-family: Impact, Charcoal, sans-serif;
+	color: #FFFF00;
+	margin:auto;
+	position: absolute;
+	bottom: 5px;
+	right: -1px;
+}
+#inspector {
+	height: 32px;
+	width: 96px;
+	background-color: #FF0000;
+	font-family: Impact, Charcoal, sans-serif;
+	color: #FFFF00;
+	margin:auto;
+	position: absolute;
+	bottom: 5px;
+	right: 95px;
+}
+#license {
+	height: 32px;
+	width: 32px;
+	margin:auto;
+	position: absolute;
+	bottom: 5px;
+	right: 191px;
+}
+#readme {
+	height: 32px;
+	width: 32px;
+	margin:auto;
+	position: absolute;
+	bottom: 5px;
+	right: 223px;
+}
