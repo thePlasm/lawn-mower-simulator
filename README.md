@@ -1,3 +1,6 @@
+Using https://github.com/karpathy/convnetjs to not use the keyboard control
+
+
 [Lawn Mower Simulator](theplasm.github.io/lawn-mower-simulator/index.html)
 ====================
 
