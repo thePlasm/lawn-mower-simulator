@@ -1,5 +1,8 @@
 Maybe use of Trying to use Ackermann Steering to avoid 3 wheels and well know usage
 
+Goal is :
+average Q-learning loss:  < 0.03243833517932349
+smooth-ish reward: > 1.9703453186266044
 
 Using https://github.com/karpathy/convnetjs to not use the keyboard control
 
