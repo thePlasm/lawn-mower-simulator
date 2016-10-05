@@ -6,6 +6,7 @@ smooth-ish reward: > 1.9703453186266044
 
 Using https://github.com/karpathy/convnetjs to not use the keyboard control
 
+Later is introducing the original map of mowned/unmowned grass instead of hazadous point
 
 [Lawn Mower Simulator](theplasm.github.io/lawn-mower-simulator/index.html)
 ====================
