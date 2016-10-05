@@ -1,3 +1,6 @@
+Maybe use of Trying to use Ackermann Steering to avoid 3 wheels and well know usage
+
+
 Using https://github.com/karpathy/convnetjs to not use the keyboard control
 
 
