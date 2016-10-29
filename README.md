@@ -1,4 +1,4 @@
-[Lawn Mower Simulator](theplasm.github.io/lawn-mower-simulator/index.html)
+[Lawn Mower Simulator](https://theplasm.github.io/lawn-mower-simulator/)
 ====================
 
 Description
